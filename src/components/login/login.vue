@@ -1,6 +1,6 @@
 <template>
   <div>
-    等率
+    <div>ddnkwd</div>
   </div>
 </template>
 
@@ -11,11 +11,8 @@
       return {
 
       };
-    },
+    }
 
-    mounted() {},
-
-    methods: {},
 
   }
 
