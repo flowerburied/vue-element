@@ -49,6 +49,7 @@ export default {
       const res=await this.api.user.login(option)
         console.log(res);
         if (res.code == 1) {
+          localStorage.setItem('token',res.data)
           this.$router.push({ name: "home" });
           this.$message({
             message: "登录成功",
