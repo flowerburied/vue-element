@@ -12,7 +12,7 @@ const routes = [{
             import ('@/components/login/login.vue')
     },
     {
-        path: '/home',
+        path: '/',
         name: 'home',
         component: () =>
             import ('@/components/home/home.vue')
