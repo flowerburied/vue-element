@@ -57,6 +57,13 @@ export default {
   data() {
     return {};
   },
+  // newVue之前自动触发
+  beforeCreate(){
+const token =localStorage.getItem('token')
+if(!token){
+  this.$router.push({name:'login'})
+}
+  },
 
   mounted() {},
 
