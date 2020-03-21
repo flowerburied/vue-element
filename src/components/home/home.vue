@@ -13,7 +13,7 @@
         </el-col>
         <el-col :span="2">
           <div class="grid-content bg-purple">
-            <a href="#" class="loginOut">退出</a>
+            <a href="#" class="loginOut" @click.prevent="handleSignout">退出</a>
           </div>
         </el-col>
       </el-col>
@@ -68,6 +68,12 @@ if(!token){
   mounted() {},
 
   methods: {
+    handleSignout(){
+// 清除token
+localStorage.clear()
+this.$message.success('退出成功')
+this.$router.push({name:'login'})
+    },
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
     },
